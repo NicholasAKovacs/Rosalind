@@ -1,0 +1,9 @@
+def revcomplement(strand):
+    comp = {'A':'T','C':'G','T':'A','G':'C'}
+    complement = [comp[base] for base in strand]
+    revstrand=complement[::-1]
+    return revstrand
+
+s = open('rosalind_revc.txt', 'r')
+for line in s:
+       print(revcomplement(line))
