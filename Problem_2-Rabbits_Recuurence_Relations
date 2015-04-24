@@ -1,0 +1,9 @@
+def rabbits(n,k):
+        mature = 1
+        young = 0
+        for i in range(n-2):
+                y = mature*k
+                m = mature + young
+                young = y
+                mature = m
+        return mature+young
